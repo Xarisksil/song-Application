@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Song List</title>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.1.14.0.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bootstrap-icons.css" />
+</head>
+
+<body>
+  <div id="repository">
+    <ul id="song-list">
+      <li class="item">
+        <div class="header">
+          <span class="a_a">...</span>
+          <span class="title">...</span>
+          <span class="tools">
+            <button class="btn btn-success favorite">f</button>
+            <button class="btn btn-danger remove">-</button>
+          </span>
+        </div>
+        <div>
+          <iframe class="my-youtube-iframe" width="560" height="315" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </li>
+    </ul>
+    <ul id="favorite-list">
+      <li class="item">
+        <a class='link' href="javascript:void(0);">
+          <span class="title"></span>
+        </a>
+        <button class="btn btn-danger btn-sm remove">-</button>
+      </li>
+    </ul>
+  </div>
+
+
+  <div id="header" class="main-content">
+    <h1>Song Application</h1>
+  </div>
+
+  <div id="content" class="main-content">
+    <div id="main-song-wrapper">
+      <h2>Suggested Songs</h2>
+      <div class="song-buttons">
+        <button class="btn-info add">Add Song</button>
+        <!-- <button class="btn-danger remove">Remove Last Song -</button> -->
+      </div>
+
+      <ul class="sortable song-list" id="main-song-list">
+      </ul>
+
+
+      <div class="modal dialog-add-song" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Song</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="new-song-form">
+                <input type="text" name="title" placeholder="Song title" />
+                <input type="text" name="iframe-url" placeholder="youtube embeded url" />
+                <textarea name="iframe-textarea" rows="4" cols="50"
+                  placeholder="Copy & Paste youtube iframe"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary add" onclick="">ok</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="favorite-song-wrapper">
+      <h2>
+        <a id="link-fav-all" href="javascript:void(0)">My Favorite Songs
+          <span><i class="bi bi-star-fill"></i></span></a>
+      </h2>
+      <ul class="fav-list list" id="fav-song-list">
+      </ul>
+
+
+      <div class="modal dialog-fav-song" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Favorite Songs</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list">
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="footer" class="main-content">
+    <p>Student: Xylenios Charalampos</p>
+    <p>Module Tutor: Konstantinos Delistavrou</p>
+  </div>
+
+
+</body>
+
+</html>
